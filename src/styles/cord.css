@@ -7,6 +7,16 @@
   from { opacity: 0; stroke-dashoffset: 1; transform: translateY(var(--strand-offset)); }
   to { opacity: 1; stroke-dashoffset: 0; transform: translateY(0); }
 }
+.braided-knot { display: block; width: 100%; }
+.braided-knot__thread--1 { --thread-color: var(--color-thread-1); }
+.braided-knot__thread--2 { --thread-color: var(--color-thread-2); }
+.braided-knot__thread--3 { --thread-color: var(--color-thread-3); }
+.braided-knot__edge { stroke: var(--color-paper); stroke-width: 9; }
+.braided-knot__strand, .braided-knot__overpass { stroke: var(--thread-color); stroke-width: 6; }
+.braided-knot__texture { stroke: var(--color-white); stroke-width: 1.3; stroke-dasharray: 1 5; opacity: 0.6; }
+.braided-knot--animated .braided-knot__thread { animation: knot-appear 1000ms var(--motion-ease) both; animation-delay: var(--thread-delay); }
+@keyframes knot-appear { from { opacity: 0; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) {
   .triple-cord__strand { animation: none !important; stroke-dashoffset: 0; transform: none; }
+  .braided-knot__thread { animation: none !important; }
 }

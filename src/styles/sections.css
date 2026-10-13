@@ -16,9 +16,13 @@
 .congratulations h2 { font-size: clamp(2.05rem, 4vw, 3.6rem); }
 .bible-reference { font-size: 0.8125rem; color: var(--color-muted); margin-top: 0.75rem; }
 .congratulations__text { font-size: 0.9375rem; line-height: 1.8; margin: 1.25rem auto 0; max-width: 570px; }
-.congratulations__cord { width: min(280px, 100%); margin: 1.3rem auto 0; }
+.congratulations__cord { width: min(340px, 100%); margin: 1.3rem auto 0; }
 .cord-legend { display: flex; justify-content: space-between; gap: 0.75rem; max-width: 280px; margin: 0 auto; padding: 0; list-style: none; color: var(--color-muted); font-size: 0.8125rem; }
 .cord-legend li:last-child { color: #796638; }
+.cord-legend li { display: flex; align-items: center; gap: 0.4rem; }
+.cord-legend li::before { content: ''; width: 0.4rem; height: 0.4rem; border-radius: 50%; background: var(--color-thread-1); flex-shrink: 0; }
+.cord-legend li:nth-child(2)::before { background: var(--color-thread-2); }
+.cord-legend li:nth-child(3)::before { background: var(--color-thread-3); }
 
 /* Cualidades */
 .qualities { padding-top: 1rem; padding-bottom: 1.5rem; }

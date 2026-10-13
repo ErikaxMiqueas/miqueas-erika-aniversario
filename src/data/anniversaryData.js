@@ -5,12 +5,15 @@ import family from '../assets/photos/family-01.webp';
 import crochet from '../assets/photos/crochet-couple.png';
 
 const photograph = (src, alt) => ({ src, alt, width: 1122, height: 1402, position: '50% 50%', placeholder: false });
+const anniversaryYears = 24;
+const anniversaryGreeting = `Feliz ${anniversaryYears}.º aniversario`;
 
 export const anniversaryData = {
   couple: {
     names: { miqueas: 'Miqueas', erika: 'Erika' },
-    pageTitle: 'Miqueas & Erika · Aniversario de matrimonio',
-    greeting: 'Feliz aniversario',
+    anniversaryYears,
+    pageTitle: `Miqueas & Erika · ${anniversaryYears}.º aniversario de matrimonio`,
+    greeting: anniversaryGreeting,
   },
   tripleCord: {
     title: 'Una cuerda de tres hilos',
@@ -40,12 +43,12 @@ Aunque recién llevo alrededor de un año conociéndolos, en este tiempo he teni
 
 Me alegra ver la disposición que ambos tienen para servir a Jehová, para apoyar a los demás y para dar de su tiempo y energías cuando hace falta. Son de esas cualidades que uno termina apreciando mucho cuando tiene la oportunidad de conocerlos más de cerca.
 
-En una fecha tan especial como su aniversario, quería aprovechar para felicitarlos y desearles que sigan disfrutando juntos de muchos momentos bonitos, manteniendo siempre a Jehová como ese tercer hilo que fortalece su matrimonio.
+En una fecha tan especial como su ${anniversaryYears}.º aniversario, quería aprovechar para felicitarlos y desearles que sigan disfrutando juntos de muchos momentos bonitos, manteniendo siempre a Jehová como ese tercer hilo que fortalece su matrimonio.
 
 Gracias también por la amistad y por el cariño que me han demostrado durante este tiempo.`,
   },
   closing: {
-    greeting: 'Feliz aniversario',
+    greeting: anniversaryGreeting,
     phrase: 'Los mejores tejidos se forman hilo a hilo. Una vida juntos también.',
     blessing: 'Que Jehová siga fortaleciendo la cuerda que han formado juntos.',
     signatureIntro: 'Con cariño,',
@@ -56,7 +59,7 @@ Gracias también por la amistad y por el cariño que me han demostrado durante e
     { id: 'cuerda-triple', title: 'Una cuerda de tres hilos', next: 'Lo que admiro de ustedes' },
     { id: 'cualidades', title: 'Lo que admiro de ustedes', next: 'Unas palabras para ustedes' },
     { id: 'mis-palabras', title: 'Unas palabras para ustedes', next: 'Un último detalle' },
-    { id: 'cierre', title: 'Feliz aniversario', next: 'Volver al comienzo' },
+    { id: 'cierre', title: anniversaryGreeting, next: 'Volver al comienzo' },
   ],
   ui: {
     skip: 'Saltar al contenido',
