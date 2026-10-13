@@ -1,0 +1,12 @@
+.triple-cord { display: block; width: 100%; overflow: visible; }
+.triple-cord__strand--1 { stroke: var(--color-thread-1); }
+.triple-cord__strand--2 { stroke: var(--color-thread-2); }
+.triple-cord__strand--3 { stroke: var(--color-thread-3); }
+.triple-cord--animated .triple-cord__strand { stroke-dasharray: 1; animation: cord-gather 1800ms var(--motion-ease) both; animation-delay: var(--strand-delay); }
+@keyframes cord-gather {
+  from { opacity: 0; stroke-dashoffset: 1; transform: translateY(var(--strand-offset)); }
+  to { opacity: 1; stroke-dashoffset: 0; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .triple-cord__strand { animation: none !important; stroke-dashoffset: 0; transform: none; }
+}

@@ -1,0 +1,37 @@
+.icon { width: 1.4rem; height: 1.4rem; }
+.circle-button { display: inline-flex; justify-content: center; align-items: center; width: 48px; height: 48px; flex-shrink: 0; border: 1px solid var(--color-line); border-radius: 50%; background: transparent; transition: background-color 180ms, border-color 180ms; }
+.circle-button:hover { background: var(--color-surface); border-color: var(--color-gold); }
+.text-button { min-height: 48px; display: inline-flex; align-items: center; justify-content: space-between; gap: var(--space-3); border: 0; border-bottom: 1px solid var(--color-gold); background: none; padding: 0.55rem 0; font-size: 0.875rem; }
+.text-button:hover { color: var(--color-burgundy); }
+.image-controls { display: flex; align-items: center; gap: 0.6rem; }
+.photo { position: relative; width: 100%; height: 100%; background: var(--color-surface); overflow: hidden; }
+.photo img { height: 100%; object-fit: var(--photo-fit, cover); object-position: var(--photo-position, center); }
+.photo__label { position: absolute; inset: 0; margin: auto; width: min(85%, 280px); height: fit-content; padding: 1rem 0.6rem; text-align: center; color: var(--color-white); background: #27251fb3; font-size: 0.75rem; letter-spacing: 0.08em; line-height: 1.6; }
+.photo__label small { display: block; font-size: 0.75rem; letter-spacing: 0.02em; opacity: 0.85; margin-top: 0.4rem; }
+.photo__mark { display: block; width: 28px; height: 34px; border: 1px solid currentColor; opacity: 0.65; margin: 0 auto 0.9rem; }
+.photo--placeholder::after { content: ''; position: absolute; inset: 12px; border: 1px solid #fff3; pointer-events: none; }
+.section-heading { max-width: 650px; margin-bottom: clamp(2rem, 4vw, 3.75rem); }
+.section-heading__number { color: var(--color-muted); display: flex; align-items: center; gap: var(--space-2); margin-bottom: 1.4rem; }
+.section-heading__number span, .inline-line { display: inline-block; width: 48px; height: 1px; background: var(--color-gold); vertical-align: middle; }
+.section-heading__note { color: var(--color-muted); font-size: 0.875rem; margin-top: var(--space-3); }
+.section-heading--centered { text-align: center; margin-inline: auto; }
+.section-heading--centered .section-heading__number { justify-content: center; }
+.scroll-progress { --progress: 0; position: fixed; top: 0; left: 0; height: 2px; width: 100%; background: var(--color-gold); transform: scaleX(var(--progress)); transform-origin: left; z-index: 50; pointer-events: none; }
+.ornament { display: flex; justify-content: center; align-items: center; gap: var(--space-3); margin-top: var(--space-5); color: var(--color-gold); }
+.ornament i { width: 36px; height: 1px; background: var(--color-line); }
+.ornament b { font-size: 1.35rem; font-weight: 400; }
+.filter-button { min-height: 44px; border: 1px solid transparent; background: transparent; padding: 0.5rem 0.8rem; font-size: 0.8125rem; line-height: 1.6; }
+.filter-button[aria-pressed='true'] { border-color: var(--color-ink); }
+.filter-button:hover { background: var(--color-surface); }
+.lightbox { position: fixed; inset: 0; width: 100%; max-width: 100%; height: 100%; height: 100dvh; max-height: 100%; padding: 1.25rem; border: 0; background: transparent; color: var(--color-white); }
+.lightbox::backdrop { background: #24221ff5; }
+.lightbox__panel { position: relative; display: flex; flex-direction: column; width: min(1100px, 100%); height: 100%; margin: auto; padding-top: 64px; }
+.lightbox__close { position: absolute; top: 0; right: 0; border-color: #fff5; }
+.lightbox .circle-button:hover { background: #fff1; border-color: var(--color-white); }
+.lightbox :focus-visible { outline-color: var(--color-white); }
+.lightbox__photo { flex: 1; min-height: 0; background: transparent; }
+.lightbox__photo img { width: 100%; height: 100%; }
+.lightbox__bottom { display: flex; justify-content: space-between; align-items: center; gap: var(--space-2); padding-top: var(--space-3); }
+.lightbox__bottom p { font-size: 0.8125rem; margin-top: 0.25rem; }
+.lightbox__bottom .eyebrow { opacity: 0.7; }
+@media (max-width: 399px) { .lightbox { padding: 1rem; } .lightbox__bottom { gap: 0.5rem; } .lightbox__bottom .image-controls { gap: 0.3rem; } }

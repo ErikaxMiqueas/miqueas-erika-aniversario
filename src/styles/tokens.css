@@ -1,0 +1,26 @@
+:root {
+  --color-paper: #f7f4ed;
+  --color-surface: #eee9df;
+  --color-ink: #302e29;
+  --color-muted: #716a5e;
+  --color-gold: #9b8255;
+  --color-burgundy: #563b3e;
+  --color-line: #d9d1c1;
+  --color-white: #fffaf1;
+  --font-title: 'Cormorant Garamond', 'Baskerville', 'Georgia', serif;
+  --font-body: 'Manrope', 'Segoe UI', sans-serif;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4.5rem;
+  --space-section: clamp(2.75rem, 5.5vw, 5.5rem);
+  --gutter: clamp(1.25rem, 5vw, 5rem);
+  --content-width: 1160px;
+  --color-thread-1: #9b8872;
+  --color-thread-2: #6f5e4b;
+  --color-thread-3: #b29a65;
+  --motion-duration: 700ms;
+  --motion-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}

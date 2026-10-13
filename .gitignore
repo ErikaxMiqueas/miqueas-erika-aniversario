@@ -1,0 +1,14 @@
+node_modules/
+.pnpm-store/
+dist/
+.DS_Store
+*.local
+.qa/
+.env
+.env.*
+!.env.example
+*.log
+*.tmp
+*.zip
+Thumbs.db
+Desktop.ini
